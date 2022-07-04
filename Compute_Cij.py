@@ -1912,8 +1912,6 @@ def Loading_E12(E12,X,Y,Z):
               u1=UNSET, u2=E12*(2.*X), u3=UNSET, ur1=UNSET, ur2=UNSET, ur3=UNSET)
 
 
-    
-    
 
 def Loading_E23(E23,X,Y,Z): 
     
@@ -1982,8 +1980,9 @@ def Job_Creat(job_name, description_note, CPU_num = 1, memory_per = 90):
             "The number of domains must be a multiple of the number of processors
             for domian level parallelization".
         
-        Read Stasa page 352.
-    
+        Read Stasa FE book page 352, for further information about SUBSTRUCTURING
+        Stasa, Frank L. Applied finite element analysis for engineers. Harcourt College Pub, 1985.
+        
     
     """  
     # My defualt
@@ -2032,7 +2031,7 @@ def Processing(X,Y,Z, element_size,
          telo_const_(fb/rl): tolerance for putting the constraints. It may be important when 
          you have a big difference (deviation) between front/back and left/right sizes.
          
-         remind ---> in my constraints function, it will be telo*element size
+         remind ---> in the constraints function, it will be telo*element size
     '''
     
     ##Set-------------------------------------------------------------
@@ -2146,7 +2145,7 @@ def Processing(X,Y,Z, element_size,
     E11=1.0 
     Loading_E11(E11,X,Y,Z)                  # Applying loading. 
     description = 'Applying E11 Strain in direction X on dummy point 1'
-    Job_Creat(E11_job, description)        # Creat Job
+    Job_Creat(E11_job, description)         # Creat Job
     write_job_inp(E11_job)                  # Wrting .inp file (for linux)
     Job_submit(E11_job)                     # Submiting job
     mdb.models['Model-1'].boundaryConditions['E11-X-Direction'].suppress()
@@ -2167,7 +2166,7 @@ def Processing(X,Y,Z, element_size,
     mdb.models['Model-1'].boundaryConditions['E33-Z-Direction_FIXED'].suppress()
     mdb.models['Model-1'].boundaryConditions['E22-Y-Direction'].suppress()
     mdb.models['Model-1'].boundaryConditions['E11-X-Direction_FIXED'].suppress()   
-#                              # delete boundary conditions of this part.
+#                 # delete boundary conditions of this part.
 #______________________________________________________________________________
     '''Job and loading for E33. 
         E33: Macro-strain in direction Z. (Defult value E33=1.0)       
@@ -2176,13 +2175,13 @@ def Processing(X,Y,Z, element_size,
     E33=1.0   
     Loading_E33(E33,X,Y,Z)                  # Applying loading.
     description = 'Applying E33 Strain in direction Z on dummy point 3'
-    Job_Creat(E33_job, description)        # Creat Job
+    Job_Creat(E33_job, description)         # Creat Job
     write_job_inp(E33_job)                  # Wrting .inp file (for linux)
     Job_submit(E33_job)                     # Submiting job
     mdb.models['Model-1'].boundaryConditions['E33-Z-Direction'].suppress()
     mdb.models['Model-1'].boundaryConditions['E22-Y-Direction_FIXED'].suppress()
     mdb.models['Model-1'].boundaryConditions['E11-X-Direction_FIXED'].suppress()   
-#                                         #delete boundary conditions of this part.
+#                # delete boundary conditions of this part.
 #______________________________________________________________________________
     # ****************************************************************************
     #  Shear: E13, E12, E23
@@ -2218,11 +2217,11 @@ def Processing(X,Y,Z, element_size,
    '''  
     Constraints_Vertices_Shear_E13() 
     E13=0.5 # gamma_13 = 1.0 (in odb you will get gamma_13)
-    Loading_E13(E13,X,Y,Z)                                                # Applying loading.
+    Loading_E13(E13,X,Y,Z)                     # Applying loading.
     description = 'Applying E13 Strain in direction X AND direction Z'
-    Job_Creat(E13_job, description)                                       # Creat Job
-    write_job_inp(E13_job)                                                # Wrting .inp file (for linux)
-    Job_submit(E13_job)                                                   # Submiting job
+    Job_Creat(E13_job, description)            # Creat Job
+    write_job_inp(E13_job)                     # Wrting .inp file (for linux)
+    Job_submit(E13_job)                        # Submiting job
 
     mdb.models['Model-1'].boundaryConditions['E13-Z-Direction'].suppress()
     mdb.models['Model-1'].boundaryConditions['E31-X-Direction'].suppress()
@@ -2252,11 +2251,11 @@ def Processing(X,Y,Z, element_size,
    '''
     Constraints_Vertices_Shear_E12() 
     E12=0.5 # gamma_12 = 1.0 (in odb you will get gamma_12)
-    Loading_E12(E12,X,Y,Z)                                                # Applying loading.
+    Loading_E12(E12,X,Y,Z)                   # Applying loading.
     description = 'Applying E12 Strain in direction X AND direction Y'
-    Job_Creat(E12_job, description)                                       # Creat Job
-    write_job_inp(E12_job)                                                # Wrting .inp file (for linux)
-    Job_submit(E12_job)                                                   # Submiting job
+    Job_Creat(E12_job, description)          # Creat Job
+    write_job_inp(E12_job)                   # Wrting .inp file (for linux)
+    Job_submit(E12_job)                      # Submiting job
 
     mdb.models['Model-1'].boundaryConditions['E12-Y-Direction'].suppress()
     mdb.models['Model-1'].boundaryConditions['E21-X-Direction'].suppress()
@@ -2286,13 +2285,13 @@ def Processing(X,Y,Z, element_size,
         Functions --> Constraint_RIGHT_LEFT_Shear, Constraint_FRONT_BACK_Shear, Constraints_Edges_Shear
         are for updating
    '''
-    Constraints_Vertices_Shear_E23()                                                             # Update boundary conditions
+    Constraints_Vertices_Shear_E23()       # Update boundary conditions
     E23=0.5 # gamma_23 = 1.0 (in odb you will get gamma_23)
-    Loading_E23(E12,X,Y,Z)                                                # Applying loading.
+    Loading_E23(E12,X,Y,Z)                 # Applying loading.
     description = 'Applying E23 Strain in direction Y AND direction Z'
     Job_Creat(E23_job, description)        # Creat Job
-    write_job_inp(E23_job)                                                # Wrting .inp file (for linux)
-    Job_submit(E23_job)                                                   # Submiting job
+    write_job_inp(E23_job)                 # Wrting .inp file (for linux)
+    Job_submit(E23_job)                    # Submiting job
     
     mdb.models['Model-1'].boundaryConditions['E32-Y-Direction'].suppress()
     mdb.models['Model-1'].boundaryConditions['E23-Z-Direction'].suppress()
@@ -2384,7 +2383,6 @@ def Post_processing(E11_job, E22_job, E33_job,
     Ct=np.zeros((6,6)); #temp
     C=np.zeros((6,6));
     GPa = 1.0e9;
-#    ac=3 
     ac = 9 # for convergence study 
 
     Ct[0,0]= (Avg_Stress_11[0]/Avg_Strain_11[0])/GPa; C[0,0]=round(Ct[0,0],ac)
@@ -2454,10 +2452,12 @@ def Post_processing(E11_job, E22_job, E33_job,
 
 
 
-def change_work_dir():
-    os.chdir(r"D:\mcodes\homogen\abaqus_files")
+#def change_work_dir():
+#    os.chdir(r"D:\mcodes\homogen\abaqus_files")
 
-
+def change_work_dir(directory):
+    os.chdir(directory)
+    
 
 
 # =============================================================================
