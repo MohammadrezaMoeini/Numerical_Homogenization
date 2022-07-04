@@ -28,7 +28,6 @@ Abaqus 6.14
 
 
 # Citation
-Honeycomb homogenization:
 @article{moeini2022numerical,
   title={Numerical homogenization of a linearly elastic honeycomb lattice structure and comparison with analytical and experimental results},
   author={Moeini, Mohammadreza and Begon, Mickael and L{\'e}vesque, Martin},
@@ -39,7 +38,7 @@ Honeycomb homogenization:
   publisher={Elsevier}
 }
 
-For the square and triangular homoegenization 
+ 
 @article{moeini2022computationally,
   title={Computationally efficient model to predict the deformations of a cellular foot orthotic},
   author={Moeini, Mohammadreza and M{\'e}nard, Anne-Laure and Yue, Lingyu and Hajizadeh, Maryam and Begon, Mickael and L{\'e}vesque, Martin},
