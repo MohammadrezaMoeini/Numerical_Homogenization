@@ -22,6 +22,8 @@ Example for the honeycmb cell, square and triangular cells
 
 
 
+
+
 # Dependencies
 Numpy 
 Abaqus 6.14
