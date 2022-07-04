@@ -7,17 +7,23 @@ Created on Mon Jul  4 14:02:54 2022
 
 import os
 
+# =============================================================================
+# Run the required scripts
+# =============================================================================
 execfile('D:/mpcodes/Numerical_Homogenization/Compute_Cij.py', __main__.__dict__)
 execfile('D:/mpcodes/Numerical_Homogenization/RVE_Honeycomb.py', __main__.__dict__)
 
 
+# =============================================================================
+# The main file for the Example 01
+# =============================================================================
 def Run_Example01():
     
     # ---------------------------------------------------------------------
     # Create and Mesh the RVE 
     # ---------------------------------------------------------------------
     # Geometrical parameters 
-    c=2.0; t=1.0; h=4.0 #rho 40%
+    c=2.0; t=1.0; h=4.0 # for the relative density of rho=40%
     (X,Z,Y) = f_cth_to_XZY(c,t,h)
 
     # Mechanical properties 
@@ -25,7 +31,7 @@ def Run_Example01():
     E_Air =  2.5; v_Air=0.4; name_Air = 'Void'  
 
     # Meshing parameters 
-    element_size=h/10.
+    element_size=h/4.
     dF=0.1
     min_size_fac=1.0
     edge_fb=element_size
@@ -63,7 +69,7 @@ def Run_Example01():
     E13_job = 'E13_Sim'  
     E12_job = 'E12_Sim'
     E23_job = 'E23_Sim'
-    report_name = 'Cij_PLA_'+'c'+ str(int(c*100)) +'t'+ str(int(t*100)) +'_MeshSize_' +'_Ex01' + '.txt' 
+    report_name = 'Cij_PLA' +'_Ex01Honeycomb' + '.txt' 
 
     # Run the simulaitons
     Processing(X,Y,Z, element_size,
@@ -80,7 +86,7 @@ def Run_Example01():
 
 
 # =============================================================================
-# Directory 
+# Change the directory 
 # =============================================================================
 directory = r"D:\mpcodes\Numerical_Homogenization\Examples\Example01\AabaqusFiles"
 change_work_dir(directory)
