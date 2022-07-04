@@ -20,9 +20,15 @@ This is very simple example for the honeycomb RVE.
 # Lattice structures
 Example for the honeycmb cell, square and triangular cells
 
+
+
+# Dependencies
+Numpy 
+Abaqus 6.14
+
+
 # Citation
 Honeycomb homogenization:
-
 @article{moeini2022numerical,
   title={Numerical homogenization of a linearly elastic honeycomb lattice structure and comparison with analytical and experimental results},
   author={Moeini, Mohammadreza and Begon, Mickael and L{\'e}vesque, Martin},
