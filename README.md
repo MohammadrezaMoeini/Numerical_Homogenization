@@ -6,8 +6,8 @@ properties of a heterogeneous materials with linearly elastic behaviour.
 ## Numerical Homogenization
 The homogenization technique provides the effective properties of a heterogeneous material 
 based on the mechanical properties of its micro-structure. In numerical homogenization,
-the effective strain tensor $\tilde{C}_{ijkl}$ is computed by applying six 
-orthogonal and known macro-strain tensors ($E_{ij}$) over the Representative Volume Element 
+the effective strain tensor is computed by applying six orthogonal and 
+known macro-strain tensors ($E_{ij}$) over the Representative Volume Element 
 (RVE) of the material: 
 $$\Sigma_{ij}=\tilde{C}_{ijkl}E_{kl}$$
 
@@ -24,7 +24,7 @@ RVE. In this way, between each pair of corresponding nodes on the opposite faces
 the displacement PBC is satisfied when:
 $$\mathbf{u}(\mathbf{x_2})-\mathbf{u}(\mathbf{x_1})=\mathbf{E}\cdot(\mathbf{x_2}-\mathbf{x_1})$$
 
-where $\mathbf{x_1}$ and $\mathbf{x_2}$ are location vectors. Moreover,
+where x1 and x2 are location vectors. Moreover,
 $\mathbf{u}(\mathbf{x_1})$ and $\mathbf{u}(\mathbf{x_2})$ are the displacement
 vectors of two corresponding nodes. 
 
