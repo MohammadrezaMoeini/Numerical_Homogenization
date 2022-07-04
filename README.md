@@ -8,8 +8,7 @@ The microstrures should consist of all hetergenousiry (crack, fiber, prosity, et
 
 
 Numerical homogenization provides the effective properties of a hetergenous
-material.
-
+material. $\sigma_{ij}=C_{ijkl}\varepsilon_{kl}$
 
 
 **bold text**.
