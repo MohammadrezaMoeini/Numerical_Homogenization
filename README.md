@@ -8,8 +8,8 @@ The homogenization technique provides the effective properties of a heterogeneou
 based on the mechanical properties of its micro-structure. In numerical homogenization,
 the effective strain tensor is computed by applying six orthogonal and 
 known macro-strain tensors ($E_{ij}$) over the Representative Volume Element 
-(RVE) of the material: $\mathbf{\Sigma} = \mathbf{\tilde{C}} \mathbf{E}$
-$$\Sigma_{ij}= \tilde{C}_{ijkl} E_{kl}$$
+(RVE) of the material:
+$$\mathbf{\Sigma} = \mathbf{\tilde{C}} \mathbf{E}$$
 
 The macro-stress ($\Sigma_{ij}$) is computed by a volume integration over the
 whole RVE: $ \mathbf{\Sigma}=\frac{1}{V} \int \boldsymbol{\sigma}(\mathbf{x})\text{d}V$.
