@@ -97,12 +97,22 @@ or increase the tolerence `tole_centerP`.
 
 
 # Citation
-@article{moeini2022numerical,
+- @article{moeini2022numerical,
   title={Numerical homogenization of a linearly elastic honeycomb lattice structure and comparison with analytical and experimental results},
   author={Moeini, Mohammadreza and Begon, Mickael and L{\'e}vesque, Martin},
   journal={Mechanics of Materials},
   volume={167},
   pages={104210},
+  year={2022},
+  publisher={Elsevier}
+}
+
+For the homogenization of the square and triangular cells, please cite:
+- @article{moeini2022computationally,
+  title={Computationally efficient model to predict the deformations of a cellular foot orthotic},
+  author={Moeini, Mohammadreza and M{\'e}nard, Anne-Laure and Yue, Lingyu and Hajizadeh, Maryam and Begon, Mickael and L{\'e}vesque, Martin},
+  journal={Computers in Biology and Medicine},
+  pages={105532},
   year={2022},
   publisher={Elsevier}
 }
