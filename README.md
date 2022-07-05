@@ -53,7 +53,26 @@ Moeini, Mohammadreza, Mickael Begon, and Martin Lévesque.
 and comparison with analytical and experimental results." Mechanics of Materials 167 (2022): 104210.
 
 
- 
+## Example 02: Square cell 
+Run the Example02_SquareCell.py 
+This script is the same as Example #1 but of the square cell. It also consists
+of a for loop to run for different geometrical parameters or element size (for
+the convergence study).
+
+## Example 03: Triangular cell 
+Run the Example03_TriangularCell.py 
+This script is also the same as the previuous lattice cells. It is for triangular
+cell having linearly elastic properties. 
+
+**Notes**: 
+- Comparing the effective properties of the square and triangular cells
+(Example #2 and #3) are published in: 
+Moeini, Mohammadreza, Anne-Laure Ménard, Lingyu Yue, Maryam Hajizadeh, 
+Mickael Begon, and Martin Lévesque. "Computationally efficient model to 
+predict the deformations of a cellular foot orthotic." Computers in Biology and 
+Medicine (2022): 105532. 
+
+
 # Possible issues 
 ## Abaqus version
 The cods were wrriten for Abaqus 6.14, and might have some issues for the higher version. 
