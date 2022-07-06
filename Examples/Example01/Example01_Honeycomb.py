@@ -3,6 +3,9 @@
 Created on Mon Jul  4 14:02:54 2022
 
 @author: momoe
+
+Example #1: Homogenization of a honeycomb cell. The honeycomb cell is assumed
+to be the RVE. It consists in solid material and void phase (the elastic air).
 """
 
 import os

@@ -97,7 +97,6 @@ lb_list = np.array([6.0])
 t_list = np.array([1.746])
 rho_list = np.array([40.])
 element_list_FineMesh = np.array([1.5])
-#element_list_FineMesh = np.array([2.5])
 
 tol_centP_list = np.array([2.0]) 
 
@@ -110,6 +109,8 @@ for i in range(0, len(rho_list)):
     report_name = 'Cij_N12_Sq_CoMesh10_rho'+str(int(rho_list[i]))+'R05072022.txt'
     Run_Example02(lb, t, element_size, tol_centP_list, 
                          SimName, report_name)
+    
+    
     
     
     
