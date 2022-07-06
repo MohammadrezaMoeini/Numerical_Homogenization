@@ -51,8 +51,11 @@ cells are published in:
 Moeini, Mohammadreza, Mickael Begon, and Martin Lévesque. 
 "Numerical homogenization of a linearly elastic honeycomb lattice structure
 and comparison with analytical and experimental results." Mechanics of Materials 167 (2022): 104210.
+<div align="center">
+  <img src="https://github.com/MohammadrezaMoeini/Numerical_Homogenization/tree/main/Figures/Fig01_Example1HoneycombHomogenization.png"><br><br>
+</div>
 
-![test](Figures/Fig01_Example1HoneycombHomogenization.png)
+
 
 ## Example 02: Square cell 
 Run the Example02_SquareCell.py 
