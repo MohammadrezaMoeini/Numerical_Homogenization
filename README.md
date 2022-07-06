@@ -53,8 +53,6 @@ Moeini, Mohammadreza, Mickael Begon, and Martin Lévesque.
 and comparison with analytical and experimental results." Mechanics of Materials 167 (2022): 104210.
 
 ![Ex1 Honeycomb Homogenization](Figures/Fig01_Example1HoneycombHomogenization.PNG)
-![Ex1 Test number of cells](Figures/Fig02_Example1TestNumberofCells.PNG)
-![Ex1 Test BC](Figures/Fig03_Example1TestBC.PNG)
 
 
 ## Example 02: Square cell 
@@ -92,6 +90,27 @@ A node close to the centerpoint of the RVE was defined and fixed to avoid the
 rigid body motion. In the coarse meshes (big element sizes), there might be an error
 to define this center node. In this case, you can either reduce the element size
 or increase the tolerence `tole_centerP`. 
+
+# Verification
+The following ways are suggested to verify your homogenized model:
+- Do a convergence study for the mesh refinement of the RVE.
+- Do a convergence study for the elastic air assumption for your cellular materials.
+ (by increasing the ratio of E_solid/E_air you should converge to a constant value. 
+ But for very large values there might be a singularity problem)
+- Compare your computed effective properties with the analytical methods, if they are available.
+For instance, in a honeycomb cell, Gibson or Malek model can be used. 
+In fiber-reinforced composite, Mori-Tanaka or other analytical methods can be used. 
+- Compare the predicted displacement field by the homogenized model against that
+ by the explicit model (i.e. the FE model of the real structure with all details
+  and having 3D solid elements). both models should predict the same displacement field. 
+- Try different boundary conditions
+- In lattice structure, try different numbers of cells (theoretically, by increasing
+ the number of cells, the difference between the homogenized model's prediction 
+ and that of the explicit model should converge to zero) 
+ 
+ (The following figures show examples of the last two ways of verification)
+![Ex1 Test number of cells](Figures/Fig02_Example1TestNumberofCells.PNG)
+![Ex1 Test BC](Figures/Fig03_Example1TestBC.PNG)
 
 
 
