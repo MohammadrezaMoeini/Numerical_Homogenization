@@ -110,7 +110,7 @@ In fiber-reinforced composite, Mori-Tanaka or other analytical methods can be us
  
  (The following figures show examples of the last two ways of verification)
 ![Ex1 Test number of cells](Figures/Fig02_Example1TestNumberofCells.PNG)
-![Ex1 Test BC](Figures/Fig03_Example1TestBC.PNG)
+![Ex1 Test BC](Figures/Fig03_Example1TestBCLoading.PNG)
 
 
 
