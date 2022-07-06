@@ -52,7 +52,9 @@ Moeini, Mohammadreza, Mickael Begon, and Martin Lévesque.
 "Numerical homogenization of a linearly elastic honeycomb lattice structure
 and comparison with analytical and experimental results." Mechanics of Materials 167 (2022): 104210.
 
-![alt text](Figures/Fig01_Example1HoneycombHomogenization.PNG)
+![Ex1 Honeycomb Homogenization](Figures/Fig01_Example1HoneycombHomogenization.PNG)
+![Ex1 Test number of cells](Figures/Fig02_Example1TestNumberofCells.PNG)
+![Ex1 Test BC](Figures/Fig03_Example1TestBC.PNG)
 
 
 ## Example 02: Square cell 
