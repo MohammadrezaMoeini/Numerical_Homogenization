@@ -51,7 +51,8 @@ import os
 
 
 def Cube(X,Y,Z):
-    """Designing the cube
+    """
+    Creating a cube with a size of 2X,2Y2Z
     Parameters:
         X,Y,Z: half of the each side of the cube
     """ 
@@ -86,7 +87,8 @@ def Cube(X,Y,Z):
     
     
 def Cut_hex(h, Y, Z, p1, p2, p3, p4, p5, p6):
-    """Cutting hexagonal on the top face of a cube
+    """
+    Cutting hexagonal on the top face of a cube
     Parameters:
         pi: 6 points of the hexgonal.
         h: Depth of the cut
@@ -171,7 +173,8 @@ def Cut_hex_external(h, Y, Z, q1, q2, q3, q4):
 
 
 def Fill_hex(h, Y, Z, t, p1, p2, p3, p4, p5, p6):
-    """Cutting hexagonal on the top face of a cube
+    """
+    Cutting hexagonal on the top face of a cube
     Parameters:
         pi: 6 points of the hexgonal.
         h: Depth of the cut
@@ -210,7 +213,8 @@ def Fill_hex(h, Y, Z, t, p1, p2, p3, p4, p5, p6):
 
     
 def Fill_hex_external(h, Y, Z, t, q1, q2, q3, q4):
-    """Cutting hexagonal on the top face of a cube
+    """
+    Cutting hexagonal on the top face of a cube
     Parameters:
         pi: 6 points of the hexgonal.
         h: Depth of the cut
@@ -396,7 +400,7 @@ def Step():
     
 def F1_Geometry(c,t,h):
     '''F1_Geometry: Designs model based on 4 independents geometrical parameters; c,t,h
-        c: length of the internal hexagonal.
+        c: length of the internal hexagonal side.
         t: the thickness of the honeycomb.
         tg: tg = t it's just to avoid errors in a function of Fill_hex_external.
         h: the hight of the honeycomb.

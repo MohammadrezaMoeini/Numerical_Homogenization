@@ -5,6 +5,7 @@ Created on Thu Apr  4 15:03:30 2019
 @author: momoe
 
 This code computes the effective properties of an RVE using numerical homogenization
+ 
 """
 
 import numpy as np
@@ -2451,10 +2452,6 @@ def Post_processing(E11_job, E22_job, E33_job,
     np.savetxt(report_name,C,fmt='%.9f') # 9 digits for convergence study
 
 
-
-#def change_work_dir():
-#    os.chdir(r"D:\mcodes\homogen\abaqus_files")
-
 def change_work_dir(directory):
     os.chdir(directory)
     
@@ -2474,6 +2471,9 @@ def f_cth_to_XZY(c,t,h):
 
 
 def Test_Result():
+    """
+    You can check your result with a bulk isotrpoic material. 
+    """
     print('------------------------------------------------------')
     GPa=1.0e9; ac=3
     E_solid= E_void = E=1.7e9/GPa
@@ -2494,3 +2494,20 @@ def Test_Result():
     print('Ref.: Nemat-Nasser P-71')
 
 
+
+
+
+
+"""
+Good References: 
+I think the best reference for PBC is Barbero’s FE book for Abaqus: 
+E. J. Barbero, Finite Element Analysis of Composite Materials Using AbaqusTM. CRC
+press, 2013.
+Moreover, my former colleague, in his PhD thesis explained everything very well. 
+Praud, Francis. Multi-scale modelling of thermoplastic-based woven composites, 
+cyclic and time-dependent behaviour. Diss. Paris, ENSAM, 2018.
+
+Acknowledgement:
+I also acknowledge my former colleague ALICE COURTOIS for her help to write the 
+PBC constraints. 
+"""

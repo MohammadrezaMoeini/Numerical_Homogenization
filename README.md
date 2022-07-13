@@ -108,7 +108,7 @@ In fiber-reinforced composite, Mori-Tanaka or other analytical methods can be us
  the number of cells, the difference between the homogenized model's prediction 
  and that of the explicit model should converge to zero) 
  
- (The following figures show examples of the last two ways of verification)
+The following figures show examples of the last two ways of verification:
 ![Ex1 Test number of cells](Figures/Fig02_Example1TestNumberofCells.PNG)
 ![Ex1 Test BC](Figures/Fig03_Example1TestBCLoading.PNG)
 
